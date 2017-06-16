@@ -116,8 +116,8 @@ bot.dialog('/passdialog', [
 			session.endDialog();
 		}
 		else {
+			session.send("Schade! Versuchen wir es erneut...");
 			session.replaceDialog('/passdialog', {repromt: true});
-			builder.Prompts.text(session, "Schade! Versuchen wir es erneut...");
 		}
 	}
 ]);
